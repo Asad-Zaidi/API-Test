@@ -42,8 +42,10 @@ function loadProduct() {
             for (var i = 0; i < response.length; i++) {
                 var pro = response[i];
                 product.append(
-                    `<div class="product"><h3>${pro.name}</h3><p><button class="btn btn-danger sm btn-property">Delete</button><button class="btn btn-warning sm btn-property">Edit</button>${pro.description}</p></div>`
-                );
+                    `<div class="product"><h3>${pro.name}</h3><p><button class="btn btn-danger sm btn-property">Delete</button>${pro.description}</p></div>`
+                   // `<div class="product"><h3>${pro.name}</h3><p><button class="btn btn-danger sm btn-property">Delete</button><button class="btn btn-warning sm btn-property">Edit</button>${pro.description}</p></div>`
+                
+                 );
             }
         }
     });
