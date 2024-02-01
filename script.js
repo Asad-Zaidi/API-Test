@@ -10,7 +10,7 @@ function addProduct() {
     $.ajax({
         url: "https://usman-fake-api.herokuapp.com/api/products",
         method: "POST",
-        data:{title, description},
+        data: { title, description },
         success: function (response) {
             console.log(response);
             loadProduct();
@@ -43,9 +43,8 @@ function loadProduct() {
                 var pro = response[i];
                 product.append(
                     `<div class="product"><h3>${pro.name}</h3><p><button class="btn btn-danger sm btn-property">Delete</button>${pro.description}</p></div>`
-                   // `<div class="product"><h3>${pro.name}</h3><p><button class="btn btn-danger sm btn-property">Delete</button><button class="btn btn-warning sm btn-property">Edit</button>${pro.description}</p></div>`
-                
-                 );
+                    // `<div class="product"><h3>${pro.name}</h3><p><button class="btn btn-danger sm btn-property">Delete</button><button class="btn btn-warning sm btn-property">Edit</button>${pro.description}</p></div>`
+                );
             }
         }
     });
